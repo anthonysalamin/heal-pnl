@@ -1,0 +1,1368 @@
+backend:
+  name: git-gateway
+  accept_roles:
+    - admin
+    - editor
+  branch: main
+media_folder: theme/assets/images
+public_folder: /assets/images
+collections:
+  - name: pages
+    label: Pages
+    identifier_field: title
+    extension: md
+    create: false
+    delete: false
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    folder: cms/pages
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '{{slug}}.html'
+      - &ref_0
+        label: Seo
+        name: seo
+        widget: object
+        collapsed: true
+        fields:
+          - label: Title
+            name: title
+            widget: string
+            required: false
+          - label: Description
+            name: description
+            widget: string
+            required: false
+          - label: No index
+            name: noindex
+            widget: boolean
+            default: false
+            required: false
+          - label: Open Graph Title
+            name: og:title
+            widget: string
+            required: false
+          - label: Open Graph Image
+            name: og:image
+            widget: image
+            required: false
+            media_library:
+              config:
+                multiple: false
+          - label: Twitter Title
+            name: twitter:title
+            widget: string
+            default: summary
+            required: false
+          - label: Twitter Card
+            name: twitter:card
+            widget: string
+            default: summary
+            required: false
+          - label: Twitter Site
+            name: twitter:site
+            widget: string
+            required: false
+          - label: Twitter Creator
+            name: twitter:creator
+            widget: string
+            required: false
+          - label: Twitter Image
+            name: twitter:image
+            widget: image
+            required: false
+            media_library:
+              config:
+                multiple: false
+          - label: Additional HTML tags
+            name: additional_tags
+            widget: text
+            required: false
+  - name: faq
+    label: FAQs
+    folder: cms/faq
+    create: true
+    identifier_field: name
+    extension: md
+    slug: '{{slug}}'
+    fields:
+      - hint: ''
+        name: title
+        label: Question
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: f_reponse
+        label: Réponse
+        widget: text
+        required: false
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: faq
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[faq].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_0
+  - label: Theme Settings
+    name: settings
+    identifier_field: title
+    extension: json
+    create: false
+    delete: false
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    files:
+      - label: General
+        name: site
+        file: cms/_data/settings/site.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: General
+          - hint: Full domain url (needed for a correct sitemap file)
+            name: domain
+            label: Domain
+            widget: string
+            required: false
+          - name: favicon
+            label: Favicon
+            widget: image
+            allow_multiple: false
+            required: false
+          - name: apple_touch_icon
+            label: Apple Touch Icon
+            widget: image
+            allow_multiple: false
+            required: false
+          - name: header_additional_content
+            label: Additional Content Header
+            hint: Content here will be placed before </head> tag
+            widget: text
+            required: false
+          - name: footer_additional_content
+            label: Additional Content Footer
+            hint: Content here will be placed before </body> tag
+            widget: text
+            required: false
+          - name: images_optimization
+            label: Images Optimization
+            widget: object
+            collapsed: false
+            fields:
+              - label: Image Formats
+                name: formats
+                widget: select
+                multiple: true
+                options:
+                  - label: Avif
+                    value: avif
+                  - label: Webp
+                    value: webp
+              - label: Image Dimensions
+                name: dimensions
+                widget: select
+                multiple: true
+                options:
+                  - label: '500'
+                    value: 500
+                  - label: '800'
+                    value: 800
+                  - label: '1080'
+                    value: 1080
+                  - label: '1600'
+                    value: 1600
+                  - label: '2000'
+                    value: 2000
+                  - label: '2600'
+                    value: 2600
+      - label: Colors
+        name: colors
+        file: cms/_data/colors.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: Colors
+      - label: Texts
+        name: texts
+        file: cms/_data/texts.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: Texts
+          - hint: 'Original text: A propos, key: -3d72ceba'
+            label: Text
+            name: '-3d72ceba'
+            widget: string
+          - hint: 'Original text: Thérapie PNL, key: -65a3ecca'
+            label: Text
+            name: '-65a3ecca'
+            widget: string
+          - hint: 'Original text: Tarifs, key: -6b1c9aaf'
+            label: Text
+            name: '-6b1c9aaf'
+            widget: string
+          - hint: 'Original text: RSV séance, key: -5a9ed690'
+            label: Text
+            name: '-5a9ed690'
+            widget: string
+          - hint: 'Original text: Contact, key: -64104400'
+            label: Text
+            name: '-64104400'
+            widget: string
+          - hint: >-
+              Original text: Programmez-vous pour le bonheur et la réussite,
+              key: 2368fef8
+            label: Text
+            name: 2368fef8
+            widget: string
+          - hint: >-
+              Original text: Il me tient à cœur que vous puissiez vivre la
+              séance de manière constructive afin de mettre en place les
+              changements que vous souhaitez. Pour cela, il est essentiel que
+              vous veilliez à rester à l'écoute de ce que vous ressentez pendant
+              nos échanges, sur ce qui vous convient ou pas — et que vous m'en
+              fassiez part au fur et à mesure. Ouverture et confiance seront nos
+              alliés communs tout au long de notre travail. 💖, key: -4648ea2d
+            label: Text
+            name: '-4648ea2d'
+            widget: text
+          - hint: 'Original text: Anouk Meer, key: -53990853'
+            label: Text
+            name: '-53990853'
+            widget: string
+          - hint: 'Original text: Maître praticienne en PNL, key: -43fa3d90'
+            label: Text
+            name: '-43fa3d90'
+            widget: string
+          - hint: >-
+              Original text: Programmez-vous pour le bonheur et la réussite.,
+              key: 49b6e036
+            label: Text
+            name: 49b6e036
+            widget: string
+          - hint: 'Original text: Adresse, key: 1f8fc88f'
+            label: Text
+            name: 1f8fc88f
+            widget: string
+          - hint: 'Original text: Rue St-Charles 6, key: -4b1c954'
+            label: Text
+            name: '-4b1c954'
+            widget: string
+          - hint: 'Original text: 3960 Sierre, key: -10d746a'
+            label: Text
+            name: '-10d746a'
+            widget: string
+          - hint: 'Original text: SUISSE, key: -6d8d85a2'
+            label: Text
+            name: '-6d8d85a2'
+            widget: string
+          - hint: 'Original text: anouk.meer@gmail.com, key: -ea7f54'
+            label: Text
+            name: '-ea7f54'
+            widget: string
+          - hint: 'Original text: +41 77 416 82 18, key: -40469882'
+            label: Text
+            name: '-40469882'
+            widget: string
+          - hint: 'Original text: www.heal-pnl.ch, key: -b6ece2d'
+            label: Text
+            name: '-b6ece2d'
+            widget: string
+          - hint: >-
+              Original text: Programmez votre esprit, libérez votre potentiel —
+              je vous accompagne., key: 49a66358
+            label: Text
+            name: 49a66358
+            widget: string
+          - hint: 'Original text: © , key: 1497'
+            label: Text
+            name: '1497'
+            widget: string
+          - hint: 'Original text: YYYY, key: 29ce40'
+            label: Text
+            name: 29ce40
+            widget: string
+          - hint: 'Original text:  heal-pnl.ch tous droits réservés., key: 3fab47af'
+            label: Text
+            name: 3fab47af
+            widget: string
+          - hint: 'Original text: Webdesign 💖 , key: 18959419'
+            label: Text
+            name: '18959419'
+            widget: string
+          - hint: 'Original text: anthonysalamin.ch, key: -67104443'
+            label: Text
+            name: '-67104443'
+            widget: string
+          - hint: >-
+              Original text: le coaching PNL implique l'utilisation de modèles
+              et de techniques de langage pour explorer et améliorer les
+              expériences, les perceptions et les comportements individuels.
+              Bien qu'elle puisse être bénéfique pour certaines personnes, son
+              efficacité peut varier et les résultats ne sont pas garantis. Les
+              résultats de le coaching PNL dépendent de divers facteurs,
+              notamment de la volonté de changement de la personne, de son
+              engagement dans le processus et de la nature des problèmes
+              abordés. Le coaching PNL ne remplace pas un diagnostic ou un
+              traitement médical ou psychologique, et il est essentiel de
+              consulter des professionnels de la santé qualifiés pour obtenir
+              des conseils personnalisés. En cas de crise ou d'urgence, veuillez
+              contacter immédiatement les services d'urgence locaux ou un
+              professionnel de la santé mentale. En s'engageant dans un coaching
+              PNL, les personnes reconnaissent avoir lu et compris cette clause
+              de non-responsabilité et acceptent de participer à des séances de
+              PNL en toute conscience., key: 1512fdf5
+            label: Text
+            name: 1512fdf5
+            widget: text
+          - hint: 'Original text: prise de rendez-vous, key: -8c6df72'
+            label: Text
+            name: '-8c6df72'
+            widget: string
+          - hint: 'Original text: Je vous contacterez dès que possible, key: 157a0983'
+            label: Text
+            name: 157a0983
+            widget: string
+          - hint: 'Original text: Information personelles, key: -64373736'
+            label: Text
+            name: '-64373736'
+            widget: string
+          - hint: 'Original text: Numméro de mobile, key: -860a000'
+            label: Text
+            name: '-860a000'
+            widget: string
+          - hint: 'Original text: Nom, key: 132ac'
+            label: Text
+            name: 132ac
+            widget: string
+          - hint: 'Original text: Prénom, key: -70ca419b'
+            label: Text
+            name: '-70ca419b'
+            widget: string
+          - hint: 'Original text: Email, key: 3ff5b7c'
+            label: Text
+            name: 3ff5b7c
+            widget: string
+          - hint: >-
+              Original text: Avez-vous déjà participé à une session PNL ?, key:
+              2ffe3485
+            label: Text
+            name: 2ffe3485
+            widget: string
+          - hint: 'Original text: Non, key: 132ad'
+            label: Text
+            name: 132ad
+            widget: string
+          - hint: 'Original text: Oui, key: 13723'
+            label: Text
+            name: '13723'
+            widget: string
+          - hint: >-
+              Original text: Où avez-vous entendu parler de heal PNL ?, key:
+              60d46f63
+            label: Text
+            name: 60d46f63
+            widget: string
+          - hint: 'Original text: SUBMISSION SENT, key: 237a3fec'
+            label: Text
+            name: 237a3fec
+            widget: string
+          - hint: >-
+              Original text: Thank you for your submission. We will follow up
+              shortly., key: 6a039bf4
+            label: Text
+            name: 6a039bf4
+            widget: string
+          - hint: >-
+              Original text: It looks like something went wrong. Please contact
+              support., key: 55f6ead4
+            label: Text
+            name: 55f6ead4
+            widget: string
+          - hint: 'Original text: heal, key: 30cde8'
+            label: Text
+            name: 30cde8
+            widget: string
+          - hint: >-
+              Original text: Programmez-vous pour le bonheur et la réussite —
+              bienvenue dans le monde transformateur d'Anouk Meer, praticienne
+              en , key: 4fc5b8e1
+            label: Text
+            name: 4fc5b8e1
+            widget: text
+          - hint: 'Original text: PNL, key: 1360e'
+            label: Text
+            name: 1360e
+            widget: string
+          - hint: 'Original text: Programmation Neuro-Linguistique, key: 6a8ddc29'
+            label: Text
+            name: 6a8ddc29
+            widget: string
+          - hint: >-
+              Original text: La PNL ou Programmation Neuro-Linguistique est une
+              thérapie brève qui nous aide à développer des comportements de
+              réussite en nous apprenant à mobiliser nos ressources et à
+              utiliser nos sens., key: ab2b61f
+            label: Text
+            name: ab2b61f
+            widget: text
+          - hint: >-
+              Original text: Privilégier le "comment" du "pourquoi", key:
+              -13711053
+            label: Text
+            name: '-13711053'
+            widget: string
+          - hint: >-
+              Original text: La PNL, axée sur le "comment" plutôt que sur le
+              "pourquoi", regroupe des techniques de communication et
+              d'autotransformation visant à améliorer la perception de soi et
+              des autres. Elle facilite l'établissement et la réalisation
+              d'objectifs, le développement du potentiel, l'optimisation des
+              apprentissages, et la résolution des conflits., key: 4b8d5e59
+            label: Text
+            name: 4b8d5e59
+            widget: text
+          - hint: 'Original text: réserver une séance, key: -3e55a201'
+            label: Text
+            name: '-3e55a201'
+            widget: string
+          - hint: >-
+              Original text: Il me tient à cœur que vous puissiez vivre la
+              séance de manière constructive afin de mettre en place les
+              changements que vous souhaitez. Pour cela, il est essentiel que
+              vous veilliez à rester à l'écoute de ce que vous ressentez pendant
+              nos échanges, sur ce qui vous convient ou pas — et que vous m'en
+              fassiez part au fur et à mesure. Ouverture et confiance 💖 seront
+              nos alliés communs tout au long de notre travail., key: -7578d3e1
+            label: Text
+            name: '-7578d3e1'
+            widget: text
+          - hint: 'Original text: Praticienne en PNL, key: 47b3093d'
+            label: Text
+            name: 47b3093d
+            widget: string
+          - hint: 'Original text: Solliciter notre inconscient, key: -487d929d'
+            label: Text
+            name: '-487d929d'
+            widget: string
+          - hint: >-
+              Original text: La PNL exploite nos expériences passées et
+              connaissances oubliées. En s'adressant à notre inconscient, elle
+              réactive nos ressources, stimulant ainsi la créativité,
+              l'adaptabilité et des compétences cachées. Cette boîte à outils
+              nous permet de créer et reproduire nos propres modèles de réussite
+              en comprenant comment notre personnalité et nos comportements sont
+              influencés par notre vision du monde., key: -2cf1f0a9
+            label: Text
+            name: '-2cf1f0a9'
+            widget: text
+          - hint: 'Original text: Recadrage, key: -65f845a0'
+            label: Text
+            name: '-65f845a0'
+            widget: string
+          - hint: 'Original text: nom, key: 1aacc'
+            label: Text
+            name: 1aacc
+            widget: string
+          - hint: 'Original text: /ʁə.ka.dʁaʒ/, key: 2a76e350'
+            label: Text
+            name: 2a76e350
+            widget: string
+          - hint: >-
+              Original text: Avec des techniques de recadrage, il est possible
+              d'intervenir sur les identités, les croyances, la perte de
+              confiance en soi, les sources de colère interne, l'image de soi,
+              ainsi que sur les comportements envers autrui et dans certaines
+              situations., key: 20e4d4dd
+            label: Text
+            name: 20e4d4dd
+            widget: text
+          - hint: 'Original text: Acteur de son changement, key: -56be1e35'
+            label: Text
+            name: '-56be1e35'
+            widget: string
+          - hint: >-
+              Original text: Selon les situations, le praticien/ne en PNL est à
+              la fois un coach et un thérapeute, il accompagne tout en apportant
+              des outils pratiques à fin de sentir un mieux-être. Il fournit des
+              outils à son patient, mais c'est lui qui est l'acteur de son
+              changement., key: -2ce3405a
+            label: Text
+            name: '-2ce3405a'
+            widget: text
+          - hint: 'Original text: Changement *, key: 2fd41db8'
+            label: Text
+            name: 2fd41db8
+            widget: string
+          - hint: 'Original text: /ʃɑ̃ʒmɑ̃/, key: -b713ca4'
+            label: Text
+            name: '-b713ca4'
+            widget: string
+          - hint: >-
+              Original text: VOUS êtes responsable de votre changement. Il est
+              donc important que vous ayez une réelle envie de changer, de
+              trouver des solutions et de participer activement à votre
+              changement., key: -50f8554e
+            label: Text
+            name: '-50f8554e'
+            widget: text
+          - hint: >-
+              Original text: * Faites confiance au processus, même si les outils
+              ou les tâches semblent surprenants. L'hypnose 💫 n'est pas
+              magique, mais elle peut créer un réel changement, souvent en une
+              seule séance. Pour la PMA ou la grossesse, je recommande un
+              minimum de quatre séances pour un suivi efficace., key: 353af39c
+            label: Text
+            name: 353af39c
+            widget: text
+          - hint: 'Original text: Code déontologique, key: 38bcfa2a'
+            label: Text
+            name: 38bcfa2a
+            widget: string
+          - hint: >-
+              Original text:  — Je m'engage à vous apporter un soutien
+              approfondi, à écouter attentivement en maintenant une indépendance
+              idéologique. Je respecterai les diverses croyances, religions et
+              opinions, j'incarnerai une neutralité bienveillante et m’engage à
+              préserver une intégrité et une confidentialité maximales., key:
+              -16dd23e3
+            label: Text
+            name: '-16dd23e3'
+            widget: text
+          - hint: 'Original text: réserver une séance ✨, key: 8b0547'
+            label: Text
+            name: 8b0547
+            widget: string
+          - hint: 'Original text: Tarifs simples et transparents, key: 59a8a244'
+            label: Text
+            name: 59a8a244
+            widget: string
+          - hint: >-
+              Original text: La thérapie PNL devrait être accessible à tous, les
+              prix peuvent s'adapter à votre situation personnelle *, key:
+              -55ab2806
+            label: Text
+            name: '-55ab2806'
+            widget: text
+          - hint: 'Original text: Séance PNL ✨, key: -71f43d05'
+            label: Text
+            name: '-71f43d05'
+            widget: string
+          - hint: 'Original text: 45 — 90 min de thérapie, key: 2d8f8ddb'
+            label: Text
+            name: 2d8f8ddb
+            widget: string
+          - hint: 'Original text: CHF, key: 10481'
+            label: Text
+            name: '10481'
+            widget: string
+          - hint: 'Original text: 79, key: 6e2'
+            label: Text
+            name: '6e2'
+            widget: string
+          - hint: 'Original text:  / séance, key: 8eafa56'
+            label: Text
+            name: 8eafa56
+            widget: string
+          - hint: 'Original text: Services, key: 560f747e'
+            label: Text
+            name: 560f747e
+            widget: string
+          - hint: >-
+              Original text: Une séance comprend, sans s'y limiter, key:
+              -51506aed
+            label: Text
+            name: '-51506aed'
+            widget: string
+          - hint: 'Original text: Évaluation, key: -6023c8a8'
+            label: Text
+            name: '-6023c8a8'
+            widget: string
+          - hint: 'Original text: Définition des objectifs, key: 336c3660'
+            label: Text
+            name: 336c3660
+            widget: string
+          - hint: 'Original text: Création de rapport, key: 12ce67c8'
+            label: Text
+            name: 12ce67c8
+            widget: string
+          - hint: >-
+              Original text: Exploration des pensées et des émotions, key:
+              18b8c65
+            label: Text
+            name: 18b8c65
+            widget: string
+          - hint: 'Original text: Restructuration cognitive, key: -11178536'
+            label: Text
+            name: '-11178536'
+            widget: string
+          - hint: 'Original text: Modification des comportements, key: -1f930760'
+            label: Text
+            name: '-1f930760'
+            widget: string
+          - hint: 'Original text: Développement de compétences, key: -16afc57d'
+            label: Text
+            name: '-16afc57d'
+            widget: string
+          - hint: 'Original text: Devoirs à domicile, key: 7168c296'
+            label: Text
+            name: 7168c296
+            widget: string
+          - hint: 'Original text: Suivi des progrès, key: eab58cf'
+            label: Text
+            name: eab58cf
+            widget: string
+          - hint: 'Original text: Clôture et suivi, key: 3960ab0a'
+            label: Text
+            name: 3960ab0a
+            widget: string
+          - hint: 'Original text: Combo, key: 3e4416e'
+            label: Text
+            name: 3e4416e
+            widget: string
+          - hint: 'Original text: Offre, key: 4892bc2'
+            label: Text
+            name: 4892bc2
+            widget: string
+          - hint: 'Original text: Combinez-en 4 et , key: -10578080'
+            label: Text
+            name: '-10578080'
+            widget: string
+          - hint: 'Original text: économisez 20%, key: 3eb6d5fd'
+            label: Text
+            name: 3eb6d5fd
+            widget: string
+          - hint: 'Original text: 256, key: c253'
+            label: Text
+            name: c253
+            widget: string
+          - hint: 'Original text:  / atelier, key: -6b2b4e95'
+            label: Text
+            name: '-6b2b4e95'
+            widget: string
+          - hint: >-
+              Original text: Un atelier est constitué de 4 séances comprennant,
+              sans s'y limiter, key: 391f00bf
+            label: Text
+            name: 391f00bf
+            widget: string
+          - hint: >-
+              Original text: Vous êtes responsable de votre changement, key:
+              49ed94de
+            label: Text
+            name: 49ed94de
+            widget: string
+          - hint: >-
+              Original text:  — Il est donc important que vous ayez une réelle
+              envie de changer, de trouver des solutions et de participer
+              activement à votre changement. Je vous accompagnerais., key:
+              -49ed1267
+            label: Text
+            name: '-49ed1267'
+            widget: text
+          - hint: 'Original text: Rue St-Charles 2, key: -4b1c958'
+            label: Text
+            name: '-4b1c958'
+            widget: string
+          - hint: 'Original text: info@heal-pnl.ch, key: 67597f18'
+            label: Text
+            name: 67597f18
+            widget: string
+          - hint: 'Original text: Practicienne PNL, key: -5e23a393'
+            label: Text
+            name: '-5e23a393'
+            widget: string
+          - hint: 'Original text: Webdesign ❤️ , key: 1601c327'
+            label: Text
+            name: 1601c327
+            widget: string
+          - hint: 'Original text: anouk meer, key: 35a3a76d'
+            label: Text
+            name: 35a3a76d
+            widget: string
+          - hint: 'Original text: Prix simples et transparents, key: 1c4ed3c4'
+            label: Text
+            name: 1c4ed3c4
+            widget: string
+          - hint: 'Original text: Séance PNL, key: -1419074d'
+            label: Text
+            name: '-1419074d'
+            widget: string
+          - hint: 'Original text: 45 — 90 min de thérapie 🔮, key: -b579b0a'
+            label: Text
+            name: '-b579b0a'
+            widget: string
+          - hint: >-
+              Original text: * Vous êtes responsable de votre changement, key:
+              -2caf9b98
+            label: Text
+            name: '-2caf9b98'
+            widget: string
+          - hint: "Original text:  — \_Pour cela, il est essentiel que vous veilliez à rester à l'écoute de ce que vous ressentez pendant nos échanges, sur ce qui vous convient ou pas — et que vous m'en fassiez part au fur et à mesure., key: 2f930f2e"
+            label: Text
+            name: 2f930f2e
+            widget: text
+          - hint: 'Original text: Améliorer la perception de soi, key: 635f0094'
+            label: Text
+            name: 635f0094
+            widget: string
+          - hint: 'Original text: Mobiliser ses ressources, key: -60f1f4c3'
+            label: Text
+            name: '-60f1f4c3'
+            widget: string
+          - hint: 'Original text: Utiliser ses sens, key: -35b6ca43'
+            label: Text
+            name: '-35b6ca43'
+            widget: string
+          - hint: 'Original text: Scroll, key: -6cb52d13'
+            label: Text
+            name: '-6cb52d13'
+            widget: string
+          - hint: >-
+              Original text: Programmez-vous pour le bonheur et la réussite —
+              bienvenue dans le monde transformateur d'Anouk Meer, Maître
+              praticienne en , key: -12c6a0b2
+            label: Text
+            name: '-12c6a0b2'
+            widget: text
+          - hint: >-
+              Original text: Je vous invite à faire confiance au processus, même
+              si les outils ou tâches semblent surprenants. La PNL n'est pas
+              magique, mais elle peut créer un réel changement dès la 1ère
+              séance., key: 4b314062
+            label: Text
+            name: 4b314062
+            widget: text
+          - hint: >-
+              Original text: VOUS êtes responsable de votre changement. Il est
+              donc important que vous ayez une réelle envie de changer, de
+              trouver des solutions et de participer activement à votre
+              transformation., key: fde6f17
+            label: Text
+            name: fde6f17
+            widget: text
+          - hint: >-
+              Original text: * Je vous invite à faire confiance au processus,
+              même si les outils ou les tâches semblent surprenants. L'hypnose
+              n'est pas magique, mais elle peut créer un réel changement,
+              souvent en une seule séance. Pour la PMA ou la grossesse, je
+              recommande un minimum de quatre séances pour un suivi efficace.,
+              key: 24493656
+            label: Text
+            name: '24493656'
+            widget: text
+          - hint: 'Original text: RSV une séance ✨, key: -8ce2054'
+            label: Text
+            name: '-8ce2054'
+            widget: string
+          - hint: >-
+              Original text: Le coaching PNL est très personnelle; il est
+              crucial que vous soyez attentif à ce que vous ressentez pendant
+              nos échanges., key: -7918921a
+            label: Text
+            name: '-7918921a'
+            widget: text
+          - hint: 'Original text: Séance solo, key: -6ef77926'
+            label: Text
+            name: '-6ef77926'
+            widget: string
+          - hint: 'Original text: 45 — 90 min de coaching, key: -2efc2e45'
+            label: Text
+            name: '-2efc2e45'
+            widget: string
+          - hint: 'Original text: 120, key: be2f'
+            label: Text
+            name: be2f
+            widget: string
+          - hint: 'Original text: économisez 10%, key: 3eb6d23c'
+            label: Text
+            name: 3eb6d23c
+            widget: string
+          - hint: 'Original text: 432, key: c993'
+            label: Text
+            name: c993
+            widget: string
+          - hint: 'Original text: RSV 4 séances ✨, key: -2bb032e1'
+            label: Text
+            name: '-2bb032e1'
+            widget: string
+          - hint: >-
+              Original text: Si, pour une raison quelconque, vous devez annuler
+              votre rendez-vous, veuillez le faire au moins 24 heures à
+              l'avance. Dans le cas contraire, des frais d'annulation seront
+              appliqués et le rendez-vous sera facturé. Merci de votre
+              compréhension et de votre coopération., key: -7c7200a5
+            label: Text
+            name: '-7c7200a5'
+            widget: text
+          - hint: 'Original text: Séance de couple, key: 700cc324'
+            label: Text
+            name: 700cc324
+            widget: string
+          - hint: 'Original text: 180, key: bee9'
+            label: Text
+            name: bee9
+            widget: string
+          - hint: 'Original text: RSV une séance de couple ✨, key: -6edeb4f5'
+            label: Text
+            name: '-6edeb4f5'
+            widget: string
+          - hint: 'Original text: Séance à distance, key: -355faf10'
+            label: Text
+            name: '-355faf10'
+            widget: string
+          - hint: 'Original text: Via Skype, paiement via TWINT, key: -7672bde3'
+            label: Text
+            name: '-7672bde3'
+            widget: string
+          - hint: 'Original text: RSV séance à distance✨, key: -32422c1d'
+            label: Text
+            name: '-32422c1d'
+            widget: string
+          - hint: 'Original text: FAQ, key: 10ef6'
+            label: Text
+            name: 10ef6
+            widget: string
+          - hint: 'Original text: Questions réponses, key: 5b3d1ebc'
+            label: Text
+            name: 5b3d1ebc
+            widget: string
+          - hint: >-
+              Original text: Si vous êtes curieux(se) de savoir comment le
+              coaching NLP peut améliorer votre bien-être et transformer votre
+              vie, vous êtes au bon endroit., key: 71219fcd
+            label: Text
+            name: 71219fcd
+            widget: text
+          - hint: >-
+              Original text: Je m'engage à vous apporter un soutien approfondi,
+              à écouter attentivement en maintenant une indépendance
+              idéologique., key: 1ac874c
+            label: Text
+            name: 1ac874c
+            widget: text
+          - hint: >-
+              Original text: Comment savoir si le coaching PNL me convient ?,
+              key: -2303b961
+            label: Text
+            name: '-2303b961'
+            widget: string
+          - hint: >-
+              Original text: Le coaching peut s'avérer bénéfique pour relever
+              différents défis, qu'il s'agisse de gérer le stress ou d'aborder
+              des problèmes émotionnels plus profonds. Si vous rencontrez des
+              difficultés, si vous vous sentez dépassé ou si vous cherchez à
+              vous épanouir, un coaching pourrait vous être utile. Lors de nos
+              premières séances, nous explorerons vos préoccupations et
+              déciderons ensemble si le coaching correspond à vos besoins., key:
+              391c11af
+            label: Text
+            name: 391c11af
+            widget: text
+          - hint: 'Original text: #coaching, key: c6d422b'
+            label: Text
+            name: c6d422b
+            widget: string
+          - hint: 'Original text: #pnl, key: 119b2b'
+            label: Text
+            name: 119b2b
+            widget: string
+          - hint: >-
+              Original text: Tout ce que je dis en coaching est-il confidentiel
+              ?, key: 53b2bc18
+            label: Text
+            name: 53b2bc18
+            widget: string
+          - hint: >-
+              Original text: Oui, la confidentialité est un aspect fondamental
+              du coaching. Ce que vous partagez au cours de nos séances est
+              privé, à quelques exceptions près, lorsque la loi l'exige ou
+              lorsqu'il y a un risque de préjudice. Nous discuterons des limites
+              de la confidentialité lors de notre première séance afin que vous
+              vous sentiez à l'aise et informé., key: -5dbcb45f
+            label: Text
+            name: '-5dbcb45f'
+            widget: text
+          - hint: 'Original text: #confidentialité, key: 64526813'
+            label: Text
+            name: '64526813'
+            widget: string
+          - hint: >-
+              Original text: Quelle est la durée habituelle d'une séance de
+              coaching PNL?, key: 6f5d7647
+            label: Text
+            name: 6f5d7647
+            widget: string
+          - hint: >-
+              Original text: Les séances durent généralement entre 40 minutes et
+              une heure. La fréquence des séances peut varier en fonction de vos
+              besoins et de vos préférences. Nous travaillerons ensemble pour
+              créer un programme qui soutienne au mieux vos objectifs
+              thérapeutiques., key: 393c9ae0
+            label: Text
+            name: 393c9ae0
+            widget: text
+          - hint: 'Original text: #durée, key: 4171c41a'
+            label: Text
+            name: 4171c41a
+            widget: string
+          - hint: 'Original text: #séance, key: cb88f08'
+            label: Text
+            name: cb88f08
+            widget: string
+          - hint: >-
+              Original text: À quoi puis-je m'attendre lors de ma première
+              séance de PNL ?, key: 605c01be
+            label: Text
+            name: 605c01be
+            widget: string
+          - hint: >-
+              Original text: La première séance est l'occasion pour nous de
+              faire connaissance. Nous discuterons des raisons qui vous poussent
+              à suivre un coaching, de vos objectifs et de la manière dont nous
+              pouvons travailler ensemble. C'est un espace sûr pour vous
+              exprimer, et nous jetterons ensemble les bases de notre parcours
+              thérapeutique., key: -7033c07b
+            label: Text
+            name: '-7033c07b'
+            widget: text
+          - hint: 'Original text: #connaissance, key: -54c36b5a'
+            label: Text
+            name: '-54c36b5a'
+            widget: string
+          - hint: 'Original text: #services, key: -686fc27f'
+            label: Text
+            name: '-686fc27f'
+            widget: string
+          - hint: >-
+              Original text: Ouverture et confiance seront nos alliés communs
+              tout au long de notre travail., key: -50eadc13
+            label: Text
+            name: '-50eadc13'
+            widget: string
+          - hint: >-
+              Original text: En quoi le coaching par la PNL diffère-t-elle du
+              coaching par la parole traditionnelle ?, key: -282dfb4b
+            label: Text
+            name: '-282dfb4b'
+            widget: string
+          - hint: >-
+              Original text: Alors que le coaching par la parole traditionnelle
+              consiste à discuter des émotions et des expériences, le coaching
+              par la PNL est davantage orientée vers l'action. Elle se concentre
+              sur l'identification et la modification de schémas de pensée et de
+              comportement spécifiques afin d'atteindre plus rapidement les
+              résultats souhaités et le développement personnel., key: -1b98bbbf
+            label: Text
+            name: '-1b98bbbf'
+            widget: text
+          - hint: >-
+              Original text: Quels sont les problèmes ou les défis auxquels le
+              coaching PNL peut répondre ?, key: -28d992a2
+            label: Text
+            name: '-28d992a2'
+            widget: string
+          - hint: >-
+              Original text: Le coaching PNL peut être bénéfique pour différents
+              problèmes, notamment l'anxiété, les phobies, les problèmes
+              d'estime de soi, les problèmes de communication et la fixation
+              d'objectifs. Elle est polyvalente et peut être adaptée pour
+              répondre à des préoccupations personnelles ou professionnelles
+              spécifiques., key: -6bcdf1e0
+            label: Text
+            name: '-6bcdf1e0'
+            widget: text
+          - hint: >-
+              Original text: Le coaching PNL est-elle une forme d'hypnose ou de
+              manipulation mentale ?, key: 59493cf7
+            label: Text
+            name: 59493cf7
+            widget: string
+          - hint: >-
+              Original text: Non, le coaching PNL n'est pas une forme d'hypnose
+              ou de contrôle de l'esprit. Il s'agit d'un processus de
+              collaboration et d'autonomisation qui implique l'exploration
+              consciente des schémas de pensée., key: -802062c
+            label: Text
+            name: '-802062c'
+            widget: text
+          - hint: 'Original text: #hypnose, key: -79d66fb1'
+            label: Text
+            name: '-79d66fb1'
+            widget: string
+          - hint: 'Original text: #collaboration, key: -27974fe'
+            label: Text
+            name: '-27974fe'
+            widget: string
+          - hint: >-
+              Original text: Programmez votre esprit, libérez votre potentiel.,
+              key: -6299f1ba
+            label: Text
+            name: '-6299f1ba'
+            widget: string
+          - hint: >-
+              Original text: En adoptant une approche consciente envers nos
+              pensées et en les dirigeant vers des perspectives optimistes, nous
+              pouvons influencer notre bien-être émotionnel., key: f81d6c2
+            label: Text
+            name: f81d6c2
+            widget: text
+      - label: Links
+        name: links
+        file: cms/_data/links.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: Links
+          - hint: 'Original link: /, key: 2f'
+            label: Link
+            name: 2f
+            widget: string
+          - hint: 'Original link: /a-propos/, key: 3791e3cd'
+            label: Link
+            name: 3791e3cd
+            widget: string
+          - hint: 'Original link: #, key: 23'
+            label: Link
+            name: '23'
+            widget: string
+          - hint: 'Original link: mailto:anouk.meer@gmail.com , key: -7ea7e214'
+            label: Link
+            name: '-7ea7e214'
+            widget: string
+          - hint: 'Original link: #footer, key: -10273082'
+            label: Link
+            name: '-10273082'
+            widget: string
+          - hint: >-
+              Original link: https://www.instagram.com/heal_by_anouk/, key:
+              7077d058
+            label: Link
+            name: 7077d058
+            widget: string
+          - hint: >-
+              Original link: mailto:anouk.meer@gmail.com ?subject=PNL, key:
+              -4968e1d6
+            label: Link
+            name: '-4968e1d6'
+            widget: string
+          - hint: 'Original link: tel:+41774168218, key: -76331d4f'
+            label: Link
+            name: '-76331d4f'
+            widget: string
+          - hint: 'Original link: https://anthonysalamin.ch/, key: 6354f121'
+            label: Link
+            name: 6354f121
+            widget: string
+          - hint: >-
+              Original link: mailto:info@heal-pnl.ch?subject=Contact, key:
+              -cbc94b0
+            label: Link
+            name: '-cbc94b0'
+            widget: string
+          - hint: 'Original link: http://anthonysalamin.ch, key: 634a37eb'
+            label: Link
+            name: 634a37eb
+            widget: string
+          - hint: 'Original link: #pnl, key: 119b2b'
+            label: Link
+            name: 119b2b
+            widget: string
+          - hint: 'Original link: #tarifs, key: 6f89314'
+            label: Link
+            name: 6f89314
+            widget: string
+          - hint: >-
+              Original link: mailto:anouk.meer@gmail.com
+              ?subject=S%C3%A9ance%20solo, key: 7a65d01c
+            label: Link
+            name: 7a65d01c
+            widget: string
+          - hint: >-
+              Original link: mailto:anouk.meer@gmail.com ?subject=Combo, key:
+              6ca0928a
+            label: Link
+            name: 6ca0928a
+            widget: string
+          - hint: >-
+              Original link: mailto:anouk.meer@gmail.com
+              ?subject=S%C3%A9ance%20de%20couple, key: -3e68529b
+            label: Link
+            name: '-3e68529b'
+            widget: string
+          - hint: >-
+              Original link: mailto:anouk.meer@gmail.com
+              ?subject=s%C3%A9ance%20%C3%A0%20distance, key: 4c1c811c
+            label: Link
+            name: 4c1c811c
+            widget: string
+          - hint: >-
+              Original link: https://calendly.com/anthonysalamin/30min, key:
+              1c4eb2cf
+            label: Link
+            name: 1c4eb2cf
+            widget: string
+      - label: Images
+        name: images
+        file: cms/_data/images.json
+        fields:
+          - label: Title
+            name: title
+            widget: hidden
+            default: Images
+          - label: Image
+            name: i4b0cb44d
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: i2eae65b8
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '38458670'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 218a5a70
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: i7834e342
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: i7fd53c8b
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: i64d6f638
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 450a53de
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-21e150ef'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 39b5c167
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 557a24d8
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-627ec479'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 22195c3c
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: b4815b7
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-3069046b'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-64d6f638'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-1608b635'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+publish_mode: editorial_workflow
