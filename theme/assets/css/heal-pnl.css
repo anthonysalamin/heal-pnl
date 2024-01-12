@@ -385,7 +385,7 @@ h1 {
   width: 40px;
   height: 40px;
   aspect-ratio: 1 / 1;
-  background-image: var(--image-i4b0cb44d), linear-gradient(to bottom, var(--lila-dark), var(--lila-dark));
+  background-image: var(--image-38457028), linear-gradient(to bottom, var(--lila-dark), var(--lila-dark));
   background-position: 50%, 0 0;
   background-size: cover, auto;
   border-radius: 8px;
@@ -529,7 +529,7 @@ h1 {
 .avatar.avatar__border {
   width: 130px;
   height: 130px;
-  background-image: var(--image-38458670);
+  background-image: var(--image-38457028);
   background-position: 50%;
   background-size: cover;
   border: 4px solid #fff;
@@ -901,9 +901,9 @@ h1 {
 }
 
 .timeline_quote-image.light {
-  background-image: var(--image-i7fd53c8b), linear-gradient(#f1ecd3, #f1ecd3);
-  background-position: 50%, 0 0;
-  background-size: cover, auto;
+  background-image: var(--image-38457028);
+  background-position: 50%;
+  background-size: cover;
 }
 
 .timeline__circle {

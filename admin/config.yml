@@ -248,17 +248,272 @@ collections:
             label: Text
             name: 2368fef8
             widget: string
-          - hint: >-
-              Original text: Il me tient à cœur que vous puissiez vivre la
-              séance de manière constructive afin de mettre en place les
-              changements que vous souhaitez. Pour cela, il est essentiel que
-              vous veilliez à rester à l'écoute de ce que vous ressentez pendant
-              nos échanges, sur ce qui vous convient ou pas — et que vous m'en
-              fassiez part au fur et à mesure. Ouverture et confiance seront nos
-              alliés communs tout au long de notre travail. 💖, key: -4648ea2d
+          - hint: "Original text: Qui suis-je\_, key: -38a00061"
             label: Text
-            name: '-4648ea2d'
+            name: '-38a00061'
+            widget: string
+          - hint: "Original text: Anouk Meer\_, key: -1f88016d"
+            label: Text
+            name: '-1f88016d'
+            widget: string
+          - hint: >-
+              Original text: Maître praticienne en programmation
+              neurolinguistique diplômée, key: 3921fd4a
+            label: Text
+            name: 3921fd4a
+            widget: string
+          - hint: >-
+              Original text: J'ai exercé le métier d'employée de commerce
+              pendant plus de 15 ans après avoir obtenu mon CFC dans ce domaine.
+              En 2020, un burn-out professionnel a bouleversé ma vie et m'a
+              incitée à prendre du temps pour moi et à réfléchir à mes choix de
+              carrière. C'est alors que j'ai commencé à explorer mon identité
+              personnelle, ce qui m'a amenée à changer de métier. La PNL m'a
+              donné de nombreux outils pour améliorer ma vie et aider les autres
+              à vivre plus sereinement., key: -5ce9adc7
+            label: Text
+            name: '-5ce9adc7'
             widget: text
+          - hint: 'Original text: Ma mission, key: -1c16cce0'
+            label: Text
+            name: '-1c16cce0'
+            widget: string
+          - hint: 'Original text: Programmez-vous pour la réussite!, key: 6870004'
+            label: Text
+            name: '6870004'
+            widget: string
+          - hint: 'Original text: ‍, key: 200d'
+            label: Text
+            name: 200d
+            widget: string
+          - hint: >-
+              Original text: Ma mission principale est de vous aider à atteindre
+              vos objectifs en travaillant sur votre façon de penser, de
+              communiquer et de vous comporter. J’utilise une variété de
+              techniques vous permettant d’identifier et de corriger les
+              croyances limitantes, les schémas de pensées négatifs et les
+              comportements inappropriés, afin de les remplacer par des pensées
+              plus positives et des comportements plus adaptatifs., key:
+              -576e2152
+            label: Text
+            name: '-576e2152'
+            widget: text
+          - hint: >-
+              Original text: Je vous soutiendrais afin de surmonter des défis
+              émotionnels, tels que l'anxiété, la dépression, les traumatismes
+              et les relations interpersonnelles difficiles. Sur le plan
+              professionnel, je vous accompagnerai dans l’atteinte des vos
+              objectifs professionnels, tels que l'amélioration de la
+              communication, la gestion du stress et la prise de décision., key:
+              -69a80eb6
+            label: Text
+            name: '-69a80eb6'
+            widget: text
+          - hint: >-
+              Original text: En résumé, ma mission est de vous fournir un
+              soutien bienveillant et sans jugement et des outils pour vous
+              aider à surmonter les obstacles qui empêchent votre croissance
+              personnelle et la réalisation de vos objectifs., key: -1e1d0dac
+            label: Text
+            name: '-1e1d0dac'
+            widget: text
+          - hint: >-
+              Original text: Qu’est-ce que la programmation neurolinguistique ?,
+              key: -2d994f01
+            label: Text
+            name: '-2d994f01'
+            widget: string
+          - hint: >-
+              Original text: La programmation neurolinguistique (PNL) est une
+              approche thérapeutique qui vise à aider les gens à améliorer leur
+              qualité de vie en modifiant leur façon de penser et de
+              communiquer. Elle se concentre sur les modèles de pensée et de
+              comportement, en les examinant pour comprendre comment le langage,
+              les croyances et les comportements influencent les émotions et les
+              résultats., key: -652a6fca
+            label: Text
+            name: '-652a6fca'
+            widget: text
+          - hint: >-
+              Original text: La PNL s'appuie sur l'idée que nous pouvons
+              utiliser notre langage pour agir sur nos pensées et nos
+              sentiments, et que nous pouvons changer ces modèles de pensée pour
+              améliorer notre bien-être. Les thérapeutes utilisent la PNL pour
+              aider les clients à identifier et à corriger les croyances
+              limitantes, les schémas de pensées négatifs et les comportements
+              inappropriés, afin de les remplacer par des pensées plus positives
+              et des comportements plus adaptatifs., key: 4f4e5fa
+            label: Text
+            name: 4f4e5fa
+            widget: text
+          - hint: >-
+              Original text: La PNL utilise des techniques telles que la
+              visualisation, la reformulation linguistique et la réorientation
+              de l'attention pour aider les clients à développer de nouvelles
+              compétences en matière de communication et de pensée, et à
+              résoudre les problèmes émotionnels et de comportement., key:
+              2afb92c6
+            label: Text
+            name: 2afb92c6
+            widget: text
+          - hint: >-
+              Original text: Pour résumer, la PNL est une approche globale pour
+              améliorer la vie des gens en travaillant sur leur façon de penser,
+              de communiquer et de se comporter., key: 1c5f9bdd
+            label: Text
+            name: 1c5f9bdd
+            widget: text
+          - hint: "Original text: Menu des soins\_, key: -42435423"
+            label: Text
+            name: '-42435423'
+            widget: string
+          - hint: "Original text: Coaching de vie\_, key: -982cbeb"
+            label: Text
+            name: '-982cbeb'
+            widget: string
+          - hint: >-
+              Original text: Se libérer des expériences difficiles, key:
+              -502b6e74
+            label: Text
+            name: '-502b6e74'
+            widget: string
+          - hint: >-
+              Original text: Se libérer de ses croyances limitantes et de ses
+              peurs, key: 33190bce
+            label: Text
+            name: 33190bce
+            widget: string
+          - hint: 'Original text: Prendre du recul, lâcher prise, key: -1155c09f'
+            label: Text
+            name: '-1155c09f'
+            widget: string
+          - hint: >-
+              Original text: Retrouver sa confiance en soi, se valoriser, key:
+              -dd0601f
+            label: Text
+            name: '-dd0601f'
+            widget: string
+          - hint: >-
+              Original text: Se connecter aux ressources dont on dispose déjà,
+              key: -69715e1d
+            label: Text
+            name: '-69715e1d'
+            widget: string
+          - hint: >-
+              Original text: Améliorer sa communication avec soi-même et les
+              autres, key: -5574bbad
+            label: Text
+            name: '-5574bbad'
+            widget: string
+          - hint: >-
+              Original text: Apprendre à gérer les conflits, ses propres
+              émotions d’une meilleure manière, key: 5bc9590d
+            label: Text
+            name: 5bc9590d
+            widget: string
+          - hint: >-
+              Original text: Changer son ressenti par rapport au passé, key:
+              3ce116c
+            label: Text
+            name: 3ce116c
+            widget: string
+          - hint: >-
+              Original text: Modifier des comportements limitants et les
+              stratégies échouantes, key: 200b4bd3
+            label: Text
+            name: 200b4bd3
+            widget: string
+          - hint: "Original text: Explorer le changement\_, key: 7815ff0c"
+            label: Text
+            name: 7815ff0c
+            widget: string
+          - hint: "Original text: Apprendre à dire non\_, key: 1f6ed298"
+            label: Text
+            name: 1f6ed298
+            widget: string
+          - hint: "Original text: Gestion du deuil, de la séparation\_, key: 664b9db7"
+            label: Text
+            name: 664b9db7
+            widget: string
+          - hint: 'Original text: Traitement des phobies, key: 578dc193'
+            label: Text
+            name: 578dc193
+            widget: string
+          - hint: "Original text: Coaching professionnel\_, key: -47d61961"
+            label: Text
+            name: '-47d61961'
+            widget: string
+          - hint: >-
+              Original text: Apprendre à gérer le stress et l’anxiété, key:
+              5dcad9ad
+            label: Text
+            name: 5dcad9ad
+            widget: string
+          - hint: >-
+              Original text: Augmenter sa confiance en soi et sa motivation,
+              key: -3865859b
+            label: Text
+            name: '-3865859b'
+            widget: string
+          - hint: >-
+              Original text: Mettre en place et organiser ses projets, key:
+              -65918a6
+            label: Text
+            name: '-65918a6'
+            widget: string
+          - hint: "Original text: Développer de nouvelles compétences\_, key: 5390b144"
+            label: Text
+            name: 5390b144
+            widget: string
+          - hint: >-
+              Original text: Apprendre à gérer le trac, les examens, la prise de
+              parole en public…, key: 48bc00ae
+            label: Text
+            name: 48bc00ae
+            widget: string
+          - hint: 'Original text: Disponibilités, key: -5e6f24ce'
+            label: Text
+            name: '-5e6f24ce'
+            widget: string
+          - hint: "Original text: Les séances se déroulent, au choix :\_ à votre domicile, en ligne ou en extérieur. Le seul impératif est que vous vous sentiez à l’aise., key: -1ad84fbc"
+            label: Text
+            name: '-1ad84fbc'
+            widget: text
+          - hint: "Original text: Lundi à Jeudi\_ : à partir de 18h00, key: 1c03d3f7"
+            label: Text
+            name: 1c03d3f7
+            widget: string
+          - hint: >-
+              Original text: Vendredi et Samedi : de 9h00 à 18h00, key:
+              -7fdb76fe
+            label: Text
+            name: '-7fdb76fe'
+            widget: string
+          - hint: >-
+              Original text: Vous êtes disponible à un autre moment ?
+              Contactez-moi., key: -7cab0b26
+            label: Text
+            name: '-7cab0b26'
+            widget: string
+          - hint: 'Original text: Dans les tarifs ajouter : , key: 6917275f'
+            label: Text
+            name: 6917275f
+            widget: string
+          - hint: >-
+              Original text: Le règlement est dû en espèces après chaque
+              consultation. Je vous signale que vous devez me faire part de vos
+              annulations par téléphone ou par e-mail 48h à l’avance, faute de
+              quoi je serai obligée de vous facturer le rendez-vous., key:
+              -1261c5c3
+            label: Text
+            name: '-1261c5c3'
+            widget: text
+          - hint: >-
+              Original text: En cas de retard, la durée de votre rendez-vous
+              sera raccourcie., key: 17f5e28d
+            label: Text
+            name: 17f5e28d
+            widget: string
           - hint: 'Original text: Anouk Meer, key: -53990853'
             label: Text
             name: '-53990853'
@@ -289,9 +544,9 @@ collections:
             label: Text
             name: '-6d8d85a2'
             widget: string
-          - hint: 'Original text: anouk.meer@gmail.com, key: -ea7f54'
+          - hint: 'Original text: bonjour@heal-pnl.ch, key: 49c686cd'
             label: Text
-            name: '-ea7f54'
+            name: 49c686cd
             widget: string
           - hint: 'Original text: +41 77 416 82 18, key: -40469882'
             label: Text
@@ -759,6 +1014,72 @@ collections:
             name: '-12c6a0b2'
             widget: text
           - hint: >-
+              Original text: Il me tient à cœur que vous puissiez vivre la
+              séance de manière constructive afin de mettre en place les
+              changements que vous souhaitez. Pour cela, il est essentiel que
+              vous veilliez à rester à l'écoute de ce que vous ressentez pendant
+              nos échanges, sur ce qui vous convient ou pas — et que vous m'en
+              fassiez part au fur et à mesure. Ouverture et confiance seront nos
+              alliés communs tout au long de notre travail. 💖, key: -4648ea2d
+            label: Text
+            name: '-4648ea2d'
+            widget: text
+          - hint: 'Original text: service, key: 7643c6b5'
+            label: Text
+            name: 7643c6b5
+            widget: string
+          - hint: 'Original text: Projection dans le passé et le futur, key: d5719aa'
+            label: Text
+            name: d5719aa
+            widget: string
+          - hint: >-
+              Original text: La technique de la ligne du temps permet de
+              revisiter et de transformer des expériences passées, de planifier
+              des objectifs futurs, et de créer des changements positifs dans le
+              présent en ajustant la perception temporelle. En utilisant cette
+              méthode, vous pouvez explorer et réorganiser vos souvenirs,
+              favorisant ainsi le bien-être émotionnel et le développement
+              personnel., key: 74ba72bd
+            label: Text
+            name: 74ba72bd
+            widget: text
+          - hint: >-
+              Original text: La PNL propose des techniques innovantes pour
+              traiter les phobies en modifiant les perceptions et les réponses
+              émotionnelles. En se concentrant sur la modélisation de
+              comportements réussis, la PNL offre une approche personnalisée
+              pour aider les individus à surmonter leurs peurs irrationnelles.,
+              key: 2bb76bcb
+            label: Text
+            name: 2bb76bcb
+            widget: text
+          - hint: 'Original text: Gestion du deuil, key: -3e5ca9a1'
+            label: Text
+            name: '-3e5ca9a1'
+            widget: string
+          - hint: >-
+              Original text: La gestion du deuil en PNL offre une approche
+              holistique pour vous aider à faire face à la perte d'un être cher.
+              Ces nombreuses techniques vous aideront à naviguer à travers la
+              douleur de manière plus constructive et à trouver des ressources
+              émotionnelles pour favoriser la guérison., key: 279ec62f
+            label: Text
+            name: 279ec62f
+            widget: text
+          - hint: 'Original text: Éradiquer procrastination, key: 6872b78'
+            label: Text
+            name: 6872b78
+            widget: string
+          - hint: >-
+              Original text: La PNL offre des stratégies efficaces pour
+              surmonter la procrastination et favoriser la productivité. C’est
+              également un outil puissant pour vous aider à démarrer un nouveau
+              projet en vous permettant de mieux comprendre et influencer vos
+              propres pensées, émotions et comportements., key: aa7b7e6
+            label: Text
+            name: aa7b7e6
+            widget: text
+          - hint: >-
               Original text: Je vous invite à faire confiance au processus, même
               si les outils ou tâches semblent surprenants. La PNL n'est pas
               magique, mais elle peut créer un réel changement dès la 1ère
@@ -862,10 +1183,10 @@ collections:
             widget: string
           - hint: >-
               Original text: Si vous êtes curieux(se) de savoir comment le
-              coaching NLP peut améliorer votre bien-être et transformer votre
-              vie, vous êtes au bon endroit., key: 71219fcd
+              coaching PNL peut améliorer votre bien-être et transformer votre
+              vie, vous êtes au bon endroit., key: 4c3f8691
             label: Text
-            name: 71219fcd
+            name: 4c3f8691
             widget: text
           - hint: >-
               Original text: Je m'engage à vous apporter un soutien approfondi,
@@ -927,13 +1248,13 @@ collections:
             name: 6f5d7647
             widget: string
           - hint: >-
-              Original text: Les séances durent généralement entre 40 minutes et
-              une heure. La fréquence des séances peut varier en fonction de vos
-              besoins et de vos préférences. Nous travaillerons ensemble pour
-              créer un programme qui soutienne au mieux vos objectifs
-              thérapeutiques., key: 393c9ae0
+              Original text: Les séances durent généralement entre une heure et
+              une et demi. La fréquence des séances peut varier en fonction de
+              vos besoins et de vos préférences. Nous travaillerons ensemble
+              pour créer un programme qui soutienne au mieux vos objectifs
+              thérapeutiques., key: 66431d17
             label: Text
-            name: 393c9ae0
+            name: 66431d17
             widget: text
           - hint: 'Original text: #durée, key: 4171c41a'
             label: Text
@@ -982,12 +1303,12 @@ collections:
           - hint: >-
               Original text: Alors que le coaching par la parole traditionnelle
               consiste à discuter des émotions et des expériences, le coaching
-              par la PNL est davantage orientée vers l'action. Elle se concentre
+              par la PNL est davantage orienté vers l'action. Il se concentre
               sur l'identification et la modification de schémas de pensée et de
               comportement spécifiques afin d'atteindre plus rapidement les
-              résultats souhaités et le développement personnel., key: -1b98bbbf
+              résultats souhaités et le développement personnel., key: 7a9793f9
             label: Text
-            name: '-1b98bbbf'
+            name: 7a9793f9
             widget: text
           - hint: >-
               Original text: Quels sont les problèmes ou les défis auxquels le
@@ -999,17 +1320,17 @@ collections:
               Original text: Le coaching PNL peut être bénéfique pour différents
               problèmes, notamment l'anxiété, les phobies, les problèmes
               d'estime de soi, les problèmes de communication et la fixation
-              d'objectifs. Elle est polyvalente et peut être adaptée pour
-              répondre à des préoccupations personnelles ou professionnelles
-              spécifiques., key: -6bcdf1e0
+              d'objectifs. Il est polyvalent et peut être adapté pour répondre à
+              des préoccupations personnelles ou professionnelles spécifiques.,
+              key: 77df0c5
             label: Text
-            name: '-6bcdf1e0'
+            name: 77df0c5
             widget: text
           - hint: >-
-              Original text: Le coaching PNL est-elle une forme d'hypnose ou de
-              manipulation mentale ?, key: 59493cf7
+              Original text: Le coaching PNL est-il une forme d'hypnose ou de
+              manipulation mentale ?, key: 7f5d7c14
             label: Text
-            name: 59493cf7
+            name: 7f5d7c14
             widget: string
           - hint: >-
               Original text: Non, le coaching PNL n'est pas une forme d'hypnose
@@ -1075,10 +1396,10 @@ collections:
             name: 7077d058
             widget: string
           - hint: >-
-              Original link: mailto:anouk.meer@gmail.com ?subject=PNL, key:
-              -4968e1d6
+              Original link: mailto:bonjour@heal-pnl.ch?subject=PNL, key:
+              37d2f083
             label: Link
-            name: '-4968e1d6'
+            name: 37d2f083
             widget: string
           - hint: 'Original link: tel:+41774168218, key: -76331d4f'
             label: Link
@@ -1107,34 +1428,44 @@ collections:
             name: 6f89314
             widget: string
           - hint: >-
-              Original link: mailto:anouk.meer@gmail.com
-              ?subject=S%C3%A9ance%20solo, key: 7a65d01c
+              Original link:
+              mailto:bonjour@heal-pnl.ch?subject=S%C3%A9ance%20solo, key:
+              f81e0a3
             label: Link
-            name: 7a65d01c
+            name: f81e0a3
             widget: string
           - hint: >-
-              Original link: mailto:anouk.meer@gmail.com ?subject=Combo, key:
-              6ca0928a
+              Original link: mailto:bonjour@heal-pnl.ch?subject=Combo, key:
+              -71cecd5d
             label: Link
-            name: 6ca0928a
+            name: '-71cecd5d'
             widget: string
           - hint: >-
-              Original link: mailto:anouk.meer@gmail.com
-              ?subject=S%C3%A9ance%20de%20couple, key: -3e68529b
+              Original link:
+              mailto:bonjour@heal-pnl.ch?subject=S%C3%A9ance%20de%20couple, key:
+              4f8846fe
             label: Link
-            name: '-3e68529b'
+            name: 4f8846fe
             widget: string
           - hint: >-
-              Original link: mailto:anouk.meer@gmail.com
-              ?subject=s%C3%A9ance%20%C3%A0%20distance, key: 4c1c811c
+              Original link:
+              mailto:bonjour@heal-pnl.ch?subject=s%C3%A9ance%20%C3%A0%20distance,
+              key: -22f03c0b
             label: Link
-            name: 4c1c811c
+            name: '-22f03c0b'
             widget: string
           - hint: >-
               Original link: https://calendly.com/anthonysalamin/30min, key:
               1c4eb2cf
             label: Link
             name: 1c4eb2cf
+            widget: string
+          - hint: >-
+              Original link:
+              mailto:bonjour@heal-pnl.ch?subject=RSV%20une%20s%C3%A9ance, key:
+              -264a3286
+            label: Link
+            name: '-264a3286'
             widget: string
       - label: Images
         name: images
@@ -1145,7 +1476,7 @@ collections:
             widget: hidden
             default: Images
           - label: Image
-            name: i4b0cb44d
+            name: '38457028'
             widget: object
             fields:
               - name: url
@@ -1159,19 +1490,6 @@ collections:
                 required: false
           - label: Image
             name: i2eae65b8
-            widget: object
-            fields:
-              - name: url
-                label: Image Url
-                widget: image
-                allow_multiple: false
-                required: false
-              - name: alt
-                label: Image Alt
-                widget: string
-                required: false
-          - label: Image
-            name: '38458670'
             widget: object
             fields:
               - name: url
@@ -1210,7 +1528,7 @@ collections:
                 widget: string
                 required: false
           - label: Image
-            name: i7fd53c8b
+            name: i4b0cb44d
             widget: object
             fields:
               - name: url
