@@ -1381,9 +1381,11 @@ collections:
             label: Link
             name: '23'
             widget: string
-          - hint: 'Original link: mailto:anouk.meer@gmail.com , key: -7ea7e214'
+          - hint: >-
+              Original link: https://calendly.com/heal-anouk-meer/30min, key:
+              126db72
             label: Link
-            name: '-7ea7e214'
+            name: 126db72
             widget: string
           - hint: 'Original link: #footer, key: -10273082'
             label: Link
@@ -1428,37 +1430,24 @@ collections:
             name: 6f89314
             widget: string
           - hint: >-
-              Original link:
-              mailto:bonjour@heal-pnl.ch?subject=S%C3%A9ance%20solo, key:
-              f81e0a3
+              Original link: https://calendly.com/heal-anouk-meer/combo, key:
+              3e7e62b
             label: Link
-            name: f81e0a3
-            widget: string
-          - hint: >-
-              Original link: mailto:bonjour@heal-pnl.ch?subject=Combo, key:
-              -71cecd5d
-            label: Link
-            name: '-71cecd5d'
+            name: 3e7e62b
             widget: string
           - hint: >-
               Original link:
-              mailto:bonjour@heal-pnl.ch?subject=S%C3%A9ance%20de%20couple, key:
-              4f8846fe
+              https://calendly.com/heal-anouk-meer/seance-de-couple, key:
+              -6175525d
             label: Link
-            name: 4f8846fe
+            name: '-6175525d'
             widget: string
           - hint: >-
               Original link:
-              mailto:bonjour@heal-pnl.ch?subject=s%C3%A9ance%20%C3%A0%20distance,
-              key: -22f03c0b
+              https://calendly.com/heal-anouk-meer/seance-par-zoom, key:
+              -4354c878
             label: Link
-            name: '-22f03c0b'
-            widget: string
-          - hint: >-
-              Original link: https://calendly.com/anthonysalamin/30min, key:
-              1c4eb2cf
-            label: Link
-            name: 1c4eb2cf
+            name: '-4354c878'
             widget: string
           - hint: >-
               Original link:
@@ -1620,19 +1609,6 @@ collections:
                 required: false
           - label: Image
             name: 22195c3c
-            widget: object
-            fields:
-              - name: url
-                label: Image Url
-                widget: image
-                allow_multiple: false
-                required: false
-              - name: alt
-                label: Image Alt
-                widget: string
-                required: false
-          - label: Image
-            name: b4815b7
             widget: object
             fields:
               - name: url
