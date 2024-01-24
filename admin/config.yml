@@ -1095,16 +1095,6 @@ collections:
             label: Text
             name: fde6f17
             widget: text
-          - hint: >-
-              Original text: * Je vous invite à faire confiance au processus,
-              même si les outils ou les tâches semblent surprenants. L'hypnose
-              n'est pas magique, mais elle peut créer un réel changement,
-              souvent en une seule séance. Pour la PMA ou la grossesse, je
-              recommande un minimum de quatre séances pour un suivi efficace.,
-              key: 24493656
-            label: Text
-            name: '24493656'
-            widget: text
           - hint: 'Original text: RSV une séance ✨, key: -8ce2054'
             label: Text
             name: '-8ce2054'
